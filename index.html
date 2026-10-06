@@ -3,59 +3,199 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#090908">
-<meta name="description" content="福井を中心に走る鉄板焼きキッチンカー、ふくらく〜福味楽園〜。映えはせん。でも、腹は満たす。">
+<meta name="theme-color" content="#090807">
+<meta name="description" content="自称・日本一映えないキッチンカー。福井を中心に走る鉄板焼きキッチンカー、ふくらく〜福味楽園〜。映えはせん。でも、腹は満たす。">
 <meta property="og:title" content="ふくらく〜福味楽園〜">
-<meta property="og:description" content="自称・日本一映えないキッチンカー。鉄板とタレと、腹いっぱいの福を。">
+<meta property="og:description" content="映えはせん。でも、腹は満たす。鉄板の音、湯気、香りごと。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fukuraku-web.vercel.app/">
-<meta property="og:image" content="https://fukuraku-web.vercel.app/assets/hero.webp">
+<meta property="og:image" content="https://fukuraku-web.vercel.app/assets/teppan-steam.webp">
 <link rel="canonical" href="https://fukuraku-web.vercel.app/">
 <title>ふくらく〜福味楽園〜｜福井の鉄板焼きキッチンカー</title>
 <style>
-:root{--bg:#090908;--fg:#f2eee7;--red:#e63b1b;--gold:#d4ab64;--paper:#ede7dc;--ink:#11110f;--line:rgba(255,255,255,.18)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;letter-spacing:.02em}a{color:inherit}.wrap{width:min(1180px,88vw);margin:auto}.nav{position:fixed;inset:0 0 auto;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:22px 5vw;background:linear-gradient(#090908d9,transparent)}.logo{text-decoration:none;font-weight:900;font-size:22px;line-height:.9}.logo small{display:block;color:var(--gold);font-size:7px;letter-spacing:.32em;margin-bottom:5px}.nav nav{display:flex;gap:26px}.nav nav a{text-decoration:none;font-size:10px;letter-spacing:.08em}.navMark{display:none;font-size:9px;letter-spacing:.18em}
-.hero{height:100svh;position:relative;overflow:hidden;display:flex;align-items:flex-end}.heroBg{position:absolute;inset:0;background:url('assets/hero.webp') 58% center/cover no-repeat;transform:scale(1.02)}.heroShade{position:absolute;inset:0;background:linear-gradient(90deg,#090908f2 0,#090908bf 35%,#09090838 72%),linear-gradient(0deg,#090908f5 0,transparent 62%)}.heroInner{position:relative;z-index:2;padding:0 6vw 8vh;max-width:1500px}.kicker{font-size:10px;font-weight:800;letter-spacing:.3em;color:var(--gold)}.hero h1{margin:20px 0 24px;font-size:clamp(62px,10.8vw,165px);line-height:.84;letter-spacing:-.075em;font-weight:950}.hero h1 span{display:block;color:var(--red)}.hero p{font-size:clamp(13px,1.25vw,18px);line-height:1.9;max-width:620px}.scroll{position:absolute;right:4vw;bottom:7vh;z-index:3;font-size:9px;letter-spacing:.28em;writing-mode:vertical-rl;color:#bdb6ab}.scroll:after{content:"";display:block;width:1px;height:55px;background:#cfc6b7;margin:12px auto 0}
-.statement{min-height:92svh;display:flex;align-items:center;padding:120px 0}.statement h2{font-size:clamp(48px,7.7vw,114px);line-height:.95;letter-spacing:-.06em;margin:0;max-width:980px}.statement p{margin:40px 0 0;max-width:610px;color:#b9b1a6;line-height:2;font-size:14px}.statement strong{color:var(--red)}
-.visual{position:relative;min-height:100svh;background-size:cover;background-position:center;display:flex;align-items:flex-end}.visual:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#090908ee 0,transparent 65%)}.visual .copy{position:relative;z-index:2;padding:0 7vw 8vh;max-width:1100px}.visual h2{font-size:clamp(54px,8vw,120px);line-height:.9;letter-spacing:-.065em;margin:15px 0}.visual p{line-height:1.9;color:#d7d0c5;max-width:640px}.truck{background-image:url('assets/truck2.webp')}.teppan{background-image:url('assets/teppan.webp');background-position:center 50%}
-.chapter{padding:120px 0 40px}.chapter .num{font-size:9px;letter-spacing:.22em;color:var(--gold)}.chapter h2{font-size:clamp(44px,6.6vw,92px);line-height:.96;letter-spacing:-.055em;margin:14px 0 35px}.chapter p{max-width:680px;color:#bcb4a9;line-height:2}
-.foodStory{display:grid;grid-template-columns:1.1fr .9fr;min-height:88svh;margin-top:70px}.foodStory.reverse{grid-template-columns:.9fr 1.1fr}.foodStory.reverse .photo{order:2}.foodStory .photo{min-height:76svh;background-size:cover;background-position:center}.foodStory .text{padding:9vw 7vw;display:flex;flex-direction:column;justify-content:center;border-top:1px solid var(--line)}.foodStory h3{font-size:clamp(42px,5.8vw,78px);line-height:.95;letter-spacing:-.05em;margin:14px 0 26px}.foodStory p{line-height:2;color:#bcb4a9}.foodStory .priceLine{font-size:13px;color:#fff;font-weight:800;margin-top:26px}.horumon{background-image:url('assets/horumon.webp')}.yakisoba{background-image:url('assets/yakisoba.webp')}.udon{background-image:url('assets/udon.webp')}
-.menu{background:var(--paper);color:var(--ink);padding:130px 0}.menuTop{display:flex;justify-content:space-between;align-items:flex-end;gap:30px}.menu h2{font-size:clamp(58px,8vw,112px);line-height:.9;letter-spacing:-.06em;margin:10px 0}.menuTop p{max-width:400px;line-height:1.8;color:#5f5b55}.menuRows{margin-top:65px;border-top:1px solid #8f887d}.menuRow{display:grid;grid-template-columns:1fr auto;gap:25px;padding:24px 0;border-bottom:1px solid #b8b0a4;align-items:end}.menuRow h3{margin:0;font-size:clamp(18px,2.2vw,28px)}.menuRow .meta{font-size:11px;color:#776f66;margin-top:6px}.menuRow strong{font-size:clamp(20px,2.4vw,31px)}.menuNote{font-size:11px;color:#6e675f;line-height:1.9;margin-top:28px}
-.where{padding:150px 0;text-align:center}.where h2,.request h2,.shop h2{font-size:clamp(58px,8.8vw,126px);line-height:.9;letter-spacing:-.065em;margin:15px auto 30px}.where p{color:#bcb4a9;line-height:1.9}.links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:38px}.cta{display:inline-flex;align-items:center;justify-content:space-between;gap:40px;min-width:250px;padding:18px 20px;text-decoration:none;border:1px solid #52504c;font-weight:900}.cta.line{background:#06c755;border-color:#06c755;color:white}.cta.red{background:var(--red);border-color:var(--red)}
-.shop{min-height:90svh;display:flex;align-items:center;position:relative;overflow:hidden;background:#16110d}.shop:before{content:"";position:absolute;width:65vw;height:65vw;max-width:900px;max-height:900px;border-radius:50%;right:-18vw;top:12%;background:#5a311d}.shop .wrap{position:relative;z-index:2}.shop p{max-width:650px;color:#c2b9ae;line-height:2}.soon{display:inline-block;margin-top:24px;border:1px solid var(--gold);padding:12px 16px;color:var(--gold);font-size:10px;letter-spacing:.2em;font-weight:800}
-.request{background:var(--red);padding:145px 0;text-align:center}.request .kicker{color:#4c180f}.request p{max-width:650px;margin:0 auto 32px;line-height:1.9}.chips{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:28px 0}.chips span{font-size:10px;font-weight:800;border:1px solid rgba(255,255,255,.55);padding:9px 12px}.request .cta{background:var(--paper);color:#111;border-color:var(--paper)}
-.footer{padding:70px 6vw 45px;display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid #292725}.footer p{font-size:9px;color:#777;line-height:1.8}.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}.reveal.on{opacity:1;transform:none}
-@media(max-width:760px){.nav{padding:18px 5vw}.nav nav{display:none}.navMark{display:block}.heroInner{padding:0 6vw 8vh}.hero h1{font-size:15.5vw}.heroBg{background-position:62% center}.heroShade{background:linear-gradient(0deg,#090908f4 0,#0909089c 55%,#09090822 100%)}.scroll{display:none}.statement{padding:100px 0;min-height:78svh}.statement h2{font-size:13vw}.visual{min-height:78svh}.visual h2{font-size:13vw}.visual .copy{padding:0 7vw 7vh}.chapter{padding:95px 0 20px}.foodStory,.foodStory.reverse{display:block;min-height:auto;margin-top:45px}.foodStory.reverse .photo{order:initial}.foodStory .photo{min-height:58svh}.foodStory .text{padding:70px 7vw}.menu{padding:100px 0}.menuTop{display:block}.menu h2{font-size:15vw}.menuRows{margin-top:45px}.menuRow{grid-template-columns:1fr auto}.where{padding:110px 0}.where h2,.request h2,.shop h2{font-size:14vw}.links{flex-direction:column}.cta{width:100%}.shop{min-height:75svh}.shop:before{width:120vw;height:120vw;right:-50vw;top:25%}.request{padding:110px 0}.footer{display:block}.footer p{margin-top:26px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+:root{
+  --black:#090807;--black2:#11100e;--paper:#f2eee5;--red:#e63d1b;
+  --orange:#ff5a24;--gold:#c99b4e;--muted:#b9b0a3;--line:rgba(255,255,255,.14);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--paper);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;overflow-x:hidden}
+a{color:inherit}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.wrap{width:min(1160px,88vw);margin:auto}
+.nav{position:fixed;z-index:100;inset:0 0 auto;display:flex;justify-content:space-between;align-items:center;padding:18px 5vw;background:linear-gradient(#090807df,transparent)}
+.logo{font-weight:950;text-decoration:none;font-size:22px;letter-spacing:-.06em}
+.logo small{display:block;color:var(--gold);font-size:7px;letter-spacing:.32em;margin-bottom:4px}
+.nav nav{display:flex;gap:24px}.nav nav a{text-decoration:none;font-size:10px}.mobileMark{display:none;font-size:9px;letter-spacing:.18em}
+
+.hero{min-height:100svh;position:relative;overflow:hidden;display:flex;align-items:end}
+.heroPhoto{position:absolute;inset:0;background:url('assets/teppan-steam.webp') 60% center/cover no-repeat;transform:scale(1.03)}
+.heroShade{position:absolute;inset:0;background:
+linear-gradient(90deg,rgba(5,5,4,.95) 0%,rgba(5,5,4,.75) 36%,rgba(5,5,4,.18) 72%),
+linear-gradient(0deg,rgba(5,5,4,.96) 0%,rgba(5,5,4,.28) 62%,rgba(5,5,4,.28) 100%)}
+.grain{position:absolute;inset:0;opacity:.16;pointer-events:none;background:
+repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 3px)}
+.heroInner{position:relative;z-index:5;width:min(1180px,88vw);margin:0 auto;padding-bottom:9vh}
+.badge{display:inline-block;position:relative;font-weight:950;font-size:clamp(13px,1.6vw,20px);letter-spacing:.02em;padding:9px 12px;color:#fff;transform:rotate(-1.3deg)}
+.badge:before{content:"";position:absolute;inset:2px -12px;background:var(--red);z-index:-1;clip-path:polygon(0 12%,100% 0,97% 86%,3% 100%)}
+.hero h1{font-size:clamp(64px,10.2vw,150px);line-height:.84;letter-spacing:-.075em;margin:26px 0 24px;font-weight:950;text-shadow:0 8px 34px rgba(0,0,0,.45)}
+.hero h1 span{display:block;color:var(--orange)}
+.heroLead{font-weight:800;font-size:clamp(15px,1.6vw,21px);line-height:1.7;max-width:650px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+.btn{min-width:220px;padding:17px 19px;text-decoration:none;font-weight:900;display:inline-flex;justify-content:space-between;gap:24px;align-items:center;border:1px solid rgba(255,255,255,.55);backdrop-filter:blur(8px);background:rgba(0,0,0,.28)}
+.btn.red{background:var(--red);border-color:var(--red)}
+
+.steam{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:3}
+.steam i{position:absolute;bottom:8%;width:34vw;height:52vh;max-width:520px;filter:blur(34px);opacity:.16;background:radial-gradient(ellipse at 50% 60%,rgba(255,255,255,.85),rgba(255,255,255,0) 65%);animation:steam 7s ease-in-out infinite}
+.steam i:nth-child(1){left:34%;animation-delay:-1s}.steam i:nth-child(2){left:55%;width:24vw;animation-delay:-3.6s}.steam i:nth-child(3){left:16%;width:20vw;animation-delay:-5.2s}
+@keyframes steam{0%{transform:translate3d(0,15%,0) scale(.8);opacity:.08}50%{opacity:.22}100%{transform:translate3d(4%,-34%,0) scale(1.18);opacity:0}}
+
+.manifesto{padding:130px 0 120px;border-bottom:1px solid var(--line)}
+.kicker{font-size:9px;font-weight:900;letter-spacing:.26em;color:var(--gold)}
+.big{font-size:clamp(52px,8.2vw,118px);line-height:.9;letter-spacing:-.065em;margin:18px 0 35px;font-weight:950}
+.big .red{color:var(--red)}
+.copy{max-width:690px;line-height:2;color:var(--muted);font-size:14px}
+
+.fullBleed{position:relative;min-height:92svh;overflow:hidden;display:flex;align-items:end}
+.fullBleed .photo{position:absolute;inset:0}
+.fullBleed .photo img{filter:contrast(1.05) saturate(1.03)}
+.fullBleed:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,6,5,.94),rgba(6,6,5,.12) 72%)}
+.fullBleed .steam{z-index:1}.fullBleedText{position:relative;z-index:4;width:min(1160px,88vw);margin:auto;padding-bottom:8vh}
+.fullBleed h2{font-size:clamp(52px,8vw,112px);line-height:.9;letter-spacing:-.065em;margin:14px 0 22px;font-weight:950}
+.fullBleed p{max-width:620px;line-height:1.9;color:#ddd5ca}
+
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:90svh}
+.split .image{position:relative;overflow:hidden}.split .image img{filter:contrast(1.1) saturate(1.05)}
+.split .text{padding:9vw 7vw;display:flex;flex-direction:column;justify-content:center}
+.split h2{font-size:clamp(48px,6.5vw,90px);line-height:.92;letter-spacing:-.06em;margin:16px 0 25px;font-weight:950}
+.split p{line-height:2;color:var(--muted)}
+.redLine{display:inline-block;color:var(--orange);font-weight:950;margin-top:20px}
+.split .steam{z-index:2}
+
+.foodGrid{background:#ece5d9;color:#111;padding:110px 0}
+.foodGrid .top{display:flex;justify-content:space-between;align-items:end;gap:28px}
+.foodGrid .top p{max-width:420px;color:#686159;line-height:1.8}
+.foodGrid h2{font-size:clamp(58px,8vw,110px);letter-spacing:-.07em;line-height:.9;margin:10px 0}
+.cards{display:grid;grid-template-columns:1.25fr .75fr;gap:12px;margin-top:50px}
+.card{position:relative;min-height:640px;overflow:hidden;background:#111;color:white}
+.card.small{min-height:640px}.card img{transition:.5s;filter:contrast(1.08) saturate(1.04)}
+.card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#050504f0 0,transparent 60%)}
+.cardText{position:absolute;z-index:4;bottom:0;padding:28px}.cardText h3{font-size:clamp(34px,4vw,58px);letter-spacing:-.04em;margin:0 0 8px}
+.cardText p{margin:0;line-height:1.7;color:#ded8cf;font-size:13px}
+.hotTag{position:absolute;z-index:5;top:20px;left:20px;background:var(--red);padding:9px 12px;color:#fff;font-weight:950;font-size:11px;transform:rotate(-2deg)}
+.card:hover img{transform:scale(1.025)}
+
+.menuRows{margin-top:14px;border-top:1px solid #9c9387}.row{display:grid;grid-template-columns:1fr auto;gap:20px;border-bottom:1px solid #b7afa3;padding:21px 0;align-items:end}
+.row h3{margin:0;font-size:20px}.row .meta{font-size:11px;color:#71695f;margin-top:4px}.row strong{font-size:23px}
+.menuNote{font-size:11px;line-height:1.9;color:#70685e;margin-top:24px}
+
+.where{position:relative;padding:130px 0;overflow:hidden;background:#0d0c0b}
+.where:before{content:"";position:absolute;inset:auto -8vw -20vw auto;width:55vw;height:55vw;border-radius:50%;background:#3c1e13;filter:blur(2px)}
+.where .wrap{position:relative;z-index:2}.where h2,.request h2{font-size:clamp(58px,8.7vw,120px);line-height:.9;letter-spacing:-.07em;margin:14px 0 25px}
+.where p{color:var(--muted);line-height:1.8}.social{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+.social a{min-width:240px;text-decoration:none;padding:18px 20px;border:1px solid #555;font-weight:950;display:flex;justify-content:space-between}
+.social .line{background:#06c755;border-color:#06c755}
+
+.truck{min-height:72svh;position:relative;background:url('assets/truck2.webp') center/cover no-repeat;display:flex;align-items:end}
+.truck:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#090807e8,transparent 72%)}
+.truck .inner{position:relative;z-index:2;width:min(1160px,88vw);margin:auto;padding-bottom:7vh}
+.truck h2{font-size:clamp(50px,7.4vw,105px);line-height:.9;letter-spacing:-.06em;margin:12px 0}
+
+.request{background:var(--red);padding:120px 0;text-align:center}.request .kicker{color:#43150d}.request p{max-width:650px;margin:0 auto 28px;line-height:1.9}
+.request .btn{background:var(--paper);border-color:var(--paper);color:#111;margin:auto}
+.foot{padding:60px 6vw;display:flex;justify-content:space-between;align-items:flex-end}.foot p{font-size:9px;color:#79736b;line-height:1.8}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s ease}.reveal.on{opacity:1;transform:none}
+@media(max-width:760px){
+  .nav nav{display:none}.mobileMark{display:block}.heroPhoto{background-position:66% center}.heroShade{background:linear-gradient(0deg,rgba(5,5,4,.96) 0,rgba(5,5,4,.52) 62%,rgba(5,5,4,.20))}
+  .heroInner{padding-bottom:8vh}.hero h1{font-size:15vw}.badge{font-size:12px}.actions{display:block}.btn{width:100%;margin-top:8px}
+  .manifesto{padding:100px 0}.big{font-size:13.6vw}
+  .fullBleed{min-height:78svh}.fullBleed h2{font-size:13vw}
+  .split{display:block;min-height:auto}.split .image{height:58svh}.split .text{padding:75px 7vw}.split h2{font-size:12vw}
+  .foodGrid{padding:90px 0}.foodGrid .top{display:block}.foodGrid h2{font-size:15vw}.cards{display:block}.card,.card.small{min-height:63svh;margin-bottom:10px}
+  .where{padding:100px 0}.where h2,.request h2{font-size:14vw}.social{display:block}.social a{width:100%;margin-top:8px}
+  .truck{min-height:65svh}.truck h2{font-size:13vw}.request{padding:100px 0}.foot{display:block}.foot p{margin-top:25px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.steam i{animation:none}.reveal{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
-<header class="nav"><a class="logo" href="#top"><small>福味楽園</small>ふくらく</a><nav><a href="#about">ふくらくについて</a><a href="#food">鉄板と味</a><a href="#menu">お品書き</a><a href="#where">今日どこにおる？</a><a href="#request">出店依頼</a></nav><div class="navMark">FUKUI / JAPAN</div></header>
+<header class="nav">
+  <a class="logo" href="#top"><small>福味楽園</small>ふくらく</a>
+  <nav><a href="#story">ふくらくについて</a><a href="#menu">お品書き</a><a href="#where">今日どこにおる？</a><a href="#request">出店依頼</a></nav>
+  <div class="mobileMark">FUKUI / TEPPAN</div>
+</header>
+
 <main id="top">
-<section class="hero"><div class="heroBg"></div><div class="heroShade"></div><div class="heroInner reveal"><div class="kicker">自称・日本一映えないキッチンカー</div><h1>映えはせん。<span>でも、腹は満たす。</span></h1><p>福井を中心に走る、鉄板焼きのキッチンカー。<br>鉄板とタレと、腹いっぱいの福を。</p></div><div class="scroll">SCROLL</div></section>
-<section class="statement" id="about"><div class="wrap reveal"><div class="kicker">ABOUT FUKURAKU</div><h2>うまいもんを、<br>目の前の<strong>鉄板</strong>から。</h2><p>飾りすぎない。気取らない。熱い鉄板で焼いて、タレを絡めて、腹いっぱい食べてもらう。「ふくらく〜福味楽園〜」は、福井を中心に走る鉄板焼きの移動販売店です。</p></div></section>
-<section class="visual truck"><div class="copy reveal"><div class="kicker">ON THE ROAD</div><h2>店は、<br>走る。</h2><p>今日いる場所が、今日の店。地域のイベントから企業案件まで、白いキッチンカーで福井を走ります。</p></div></section>
-<section class="chapter" id="food"><div class="wrap reveal"><div class="num">01 / TEPPAN</div><h2>焼く音も、<br>湯気も、味のうち。</h2><p>注文を受けてから鉄板へ。焼ける音、立ち上る湯気、タレが焦げる匂い。ふくらくの料理は、目の前で完成します。</p></div></section>
-<section class="visual teppan"><div class="copy reveal"><div class="kicker">HOT / FRESH / STRAIGHT</div><h2>鉄板から、<br>そのまま。</h2><p>余計なことはせず、熱いうちに渡す。それが一番うまい。</p></div></section>
-<section class="chapter"><div class="wrap reveal"><div class="num">02 / FOOD</div><h2>主役は、<br>鉄板の上にいる。</h2><p>ホルモン、鶏、焼きそば、焼きうどん。派手な飾りより、腹が減る匂い。ふくらくの定番を、まっすぐ焼きます。</p></div></section>
-<section class="foodStory"><div class="photo horumon"></div><div class="text reveal"><div class="kicker">HORUMON</div><h3>噛むほど、<br>タレが来る。</h3><p>牛ホルモンを鉄板で豪快に。もやし多め、キャベツ少なめ。仕上げにタレを絡めて、白飯まで止まらん味に。</p><div class="priceLine">ホルモン焼（丼） ¥1,000</div></div></section>
-<section class="foodStory reverse"><div class="photo yakisoba"></div><div class="text reveal"><div class="kicker">YAKISOBA</div><h3>鉄板の定番を、<br>タレで決める。</h3><p>麺と具材を鉄板で一気に焼いて、最後にふくらくのタレ。シンプルだからこそ、焼きが味になる。</p><div class="priceLine">タレ焼きそば ¥1,000</div></div></section>
-<section class="foodStory"><div class="photo udon"></div><div class="text reveal"><div class="kicker">YAKI UDON</div><h3>もちっと太麺。<br>濃いめのタレ。</h3><p>焼きうどんも鉄板で。もちっとした麺にタレをまとわせ、最後まで熱々で。</p><div class="priceLine">タレ焼きうどん ¥1,000</div></div></section>
-<section class="menu" id="menu"><div class="wrap"><div class="menuTop reveal"><div><div class="kicker" style="color:#95672f">MENU</div><h2>お品書き</h2></div><p>出店内容によりメニュー・価格が変更になる場合があります。</p></div><div class="menuRows reveal">
-<div class="menuRow"><div><h3>若ホル焼（丼）</h3><div class="meta">大盛 +¥500</div></div><strong>¥1,000</strong></div>
-<div class="menuRow"><div><h3>若鶏焼（丼）</h3><div class="meta">大盛 +¥500</div></div><strong>¥1,000</strong></div>
-<div class="menuRow"><div><h3>ホルモン焼（丼）</h3><div class="meta">大盛 +¥500</div></div><strong>¥1,000</strong></div>
-<div class="menuRow"><div><h3>タレ焼きそば</h3></div><strong>¥1,000</strong></div>
-<div class="menuRow"><div><h3>タレ焼きうどん</h3></div><strong>¥1,000</strong></div>
-<div class="menuRow"><div><h3>辛玉味噌</h3><div class="meta">ニンニク無料</div></div><strong>¥100</strong></div>
-</div><p class="menuNote">「ニンニク入れますか？」と聞いたら、遠慮なくどうぞ。</p></div></section>
-<section class="where" id="where"><div class="wrap reveal"><div class="kicker">WHERE ARE WE TODAY?</div><h2>今日、<br>どこにおる？</h2><p>出店予定・当日の営業情報・変更のお知らせはInstagramへ。</p><div class="links"><a class="cta" href="https://www.instagram.com/fukuraku_fukumirakuen?stkn=MXd1dTVod2R3Ym82ag%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram <b>↗</b></a><a class="cta line" href="https://lin.ee/P3EItWK" target="_blank" rel="noopener">公式LINE <b>↗</b></a></div></div></section>
-<section class="shop"><div class="wrap reveal"><div class="kicker">ONLINE SHOP</div><h2>あのタレを、<br>家でも、店でも。</h2><p>ふくらくの味をもっと遠くへ。家庭用はもちろん、飲食店向けの業務用商品まで。万能タレのオンライン販売を準備中です。</p><span class="soon">COMING SOON</span></div></section>
-<section class="request" id="request"><div class="wrap reveal"><div class="kicker">EVENT / BUSINESS</div><h2>鉄板ごと、<br>呼んでください。</h2><p>地域イベント、企業イベント、買取出店など。福井県内を中心にご相談を承ります。</p><div class="chips"><span>地域イベント</span><span>企業イベント</span><span>買取出店</span><span>その他ご相談</span></div><div class="links"><a class="cta" href="https://lin.ee/P3EItWK" target="_blank" rel="noopener">LINEで出店を相談する <b>↗</b></a></div></div></section>
+<section class="hero">
+  <div class="heroPhoto"></div><div class="heroShade"></div><div class="grain"></div>
+  <div class="steam"><i></i><i></i><i></i></div>
+  <div class="heroInner reveal">
+    <div class="badge">自称・日本一映えないキッチンカー</div>
+    <h1>映えはせん。<span>でも、腹は満たす。</span></h1>
+    <div class="heroLead">鉄板の音。立ち上る湯気。焦げるタレの香り。<br>福井を走る、鉄板焼きキッチンカー「ふくらく〜福味楽園〜」。</div>
+    <div class="actions"><a class="btn red" href="#menu">お品書きを見る <b>↓</b></a><a class="btn" href="#where">今日どこにおる？ <b>↗</b></a></div>
+  </div>
+</section>
+
+<section class="manifesto" id="story">
+  <div class="wrap reveal">
+    <div class="kicker">FUKURAKU / FUKUI</div>
+    <h2 class="big">写真より先に、<br><span class="red">匂いで振り向かせる。</span></h2>
+    <p class="copy">派手な飾りはいらん。目の前の鉄板で焼いて、タレを絡めて、熱いうちに渡す。ジュウッという音、湯気、香ばしい匂いまで含めて、ふくらくの一皿です。</p>
+  </div>
+</section>
+
+<section class="fullBleed">
+  <div class="photo"><img src="assets/teppan-action.webp" alt="鉄板で焼き上げるふくらくの料理"></div>
+  <div class="steam"><i></i><i></i></div>
+  <div class="fullBleedText reveal"><div class="kicker">SIZZLE / STEAM / GARLIC</div><h2>鉄板が、<br>一番うまい瞬間をつくる。</h2><p>焼き目をつける。野菜を合わせる。タレを入れる。最後はニンニク。余計なことはせず、鉄板の上で一気に仕上げます。</p></div>
+</section>
+
+<section class="split">
+  <div class="image"><img src="assets/teppan-close.webp" alt="鉄板で焼かれる肉とキャベツ"><div class="steam"><i></i><i></i></div></div>
+  <div class="text reveal"><div class="kicker">LIVE COOKING</div><h2>湯気まで、<br>ごちそう。</h2><p>目の前で焼けるから、待っている時間までうまい。鉄板の音がして、香りが来て、腹が減る。そのまま熱々を受け取ってください。</p><div class="redLine">「ニンニク入れますか？」</div></div>
+</section>
+
+<section class="foodGrid" id="menu">
+  <div class="wrap">
+    <div class="top reveal"><div><div class="kicker" style="color:#95652a">MENU</div><h2>お品書き</h2></div><p>まずは腹を減らして見てください。出店内容によってメニューが変わる場合があります。</p></div>
+
+    <div class="cards reveal">
+      <article class="card"><span class="hotTag">鉄板から、そのまま。</span><img src="assets/don-close.webp" alt="ふくらくの鉄板焼き丼"><div class="cardText"><h3>腹いっぱいの、鉄板飯。</h3><p>焼きたてを白飯へ。タレとニンニクまでまとめて食う。</p></div></article>
+      <article class="card small"><img src="assets/don-spicy.webp" alt="辛玉味噌を添えたふくらくの鉄板焼き丼"><div class="cardText"><h3>辛玉味噌。</h3><p>もう一段、飯を進ませる。</p></div></article>
+    </div>
+
+    <div class="menuRows reveal">
+      <div class="row"><div><h3>若ホル焼（丼）</h3><div class="meta">大盛 +¥500</div></div><strong>¥1,000</strong></div>
+      <div class="row"><div><h3>若鶏焼（丼）</h3><div class="meta">大盛 +¥500</div></div><strong>¥1,000</strong></div>
+      <div class="row"><div><h3>ホルモン焼（丼）</h3><div class="meta">大盛 +¥500</div></div><strong>¥1,000</strong></div>
+      <div class="row"><div><h3>タレ焼きそば</h3></div><strong>¥1,000</strong></div>
+      <div class="row"><div><h3>タレ焼きうどん</h3></div><strong>¥1,000</strong></div>
+      <div class="row"><div><h3>辛玉味噌</h3><div class="meta">ニンニク無料</div></div><strong>¥100</strong></div>
+    </div>
+    <p class="menuNote">※出店内容により変更する場合があります。</p>
+  </div>
+</section>
+
+<section class="where" id="where">
+  <div class="wrap reveal"><div class="kicker">WHERE ARE WE TODAY?</div><h2>今日、<br>どこにおる？</h2><p>その日の出店先、営業時間、変更のお知らせはSNSへ。<br>「食いたい」と思った日に、会いに来てください。</p><div class="social"><a href="https://www.instagram.com/fukuraku_fukumirakuen?stkn=MXd1dTVod2R3Ym82ag%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram <b>↗</b></a><a class="line" href="https://lin.ee/P3EItWK" target="_blank" rel="noopener">公式LINE <b>↗</b></a></div></div>
+</section>
+
+<section class="truck">
+  <div class="inner reveal"><div class="kicker">ON THE ROAD</div><h2>白いキッチンカーで、<br>福井を走る。</h2></div>
+</section>
+
+<section class="request" id="request">
+  <div class="wrap reveal"><div class="kicker">EVENT / BUSINESS</div><h2>鉄板ごと、<br>呼んでください。</h2><p>地域イベント、企業イベント、買取出店など。福井県内を中心にご相談を承ります。</p><a class="btn" href="https://lin.ee/P3EItWK" target="_blank" rel="noopener">LINEで出店を相談する <b>↗</b></a></div>
+</section>
 </main>
-<footer class="footer"><a class="logo" href="#top"><small>福味楽園</small>ふくらく</a><p>自称・日本一映えないキッチンカー<br>© FUKURAKU. ALL RIGHTS RESERVED.</p></footer>
+
+<footer class="foot"><a class="logo" href="#top"><small>福味楽園</small>ふくらく</a><p>自称・日本一映えないキッチンカー<br>小さな福、大きな福が訪れますように。<br>© FUKURAKU. ALL RIGHTS RESERVED.</p></footer>
+
 <script>
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
