@@ -24,12 +24,14 @@ a{color:inherit}
 img{display:block;width:100%;height:100%;object-fit:cover}
 .wrap{width:min(1160px,88vw);margin:auto}
 .nav{position:fixed;z-index:100;inset:0 0 auto;display:flex;justify-content:space-between;align-items:center;padding:18px 5vw;background:linear-gradient(#090807df,transparent)}
-.logo{font-weight:950;text-decoration:none;font-size:22px;letter-spacing:-.06em}
-.logo small{display:block;color:var(--gold);font-size:7px;letter-spacing:.32em;margin-bottom:4px}
-.nav nav{display:flex;gap:24px}.nav nav a{text-decoration:none;font-size:10px}.mobileMark{display:none;font-size:9px;letter-spacing:.18em}
+.logoImage{display:block;width:clamp(150px,16vw,225px);text-decoration:none}
+.logoImage img{width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 2px 10px rgba(0,0,0,.28))}
+.nav nav{display:flex;gap:24px}.nav nav a{text-decoration:none;font-size:10px}
+.menuBtn{display:none;width:42px;height:42px;border:0;background:rgba(0,0,0,.18);padding:9px;cursor:pointer}
+.menuBtn span{display:block;height:2px;background:#fff;margin:5px 0;border-radius:3px;transition:.2s}
 
 .hero{min-height:100svh;position:relative;overflow:hidden;display:flex;align-items:end}
-.heroPhoto{position:absolute;inset:0;background:url('assets/teppan-steam.webp') 60% center/cover no-repeat;transform:scale(1.03)}
+.heroPhoto{position:absolute;inset:0;background:url('assets/teppan-steam.webp') 60% center/cover no-repeat;transform:scale(1.03);filter:contrast(1.08) saturate(1.06) brightness(.94)}
 .heroShade{position:absolute;inset:0;background:
 linear-gradient(90deg,rgba(5,5,4,.95) 0%,rgba(5,5,4,.75) 36%,rgba(5,5,4,.18) 72%),
 linear-gradient(0deg,rgba(5,5,4,.96) 0%,rgba(5,5,4,.28) 62%,rgba(5,5,4,.28) 100%)}
@@ -46,9 +48,9 @@ repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 3px)
 .btn.red{background:var(--red);border-color:var(--red)}
 
 .steam{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:3}
-.steam i{position:absolute;bottom:8%;width:34vw;height:52vh;max-width:520px;filter:blur(34px);opacity:.16;background:radial-gradient(ellipse at 50% 60%,rgba(255,255,255,.85),rgba(255,255,255,0) 65%);animation:steam 7s ease-in-out infinite}
+.steam i{position:absolute;bottom:5%;width:34vw;height:56vh;max-width:540px;filter:blur(30px);opacity:.23;mix-blend-mode:screen;background:radial-gradient(ellipse at 50% 60%,rgba(255,255,255,.92),rgba(255,255,255,.18) 32%,rgba(255,255,255,0) 68%);animation:steam 6.8s ease-in-out infinite}
 .steam i:nth-child(1){left:34%;animation-delay:-1s}.steam i:nth-child(2){left:55%;width:24vw;animation-delay:-3.6s}.steam i:nth-child(3){left:16%;width:20vw;animation-delay:-5.2s}
-@keyframes steam{0%{transform:translate3d(0,15%,0) scale(.8);opacity:.08}50%{opacity:.22}100%{transform:translate3d(4%,-34%,0) scale(1.18);opacity:0}}
+@keyframes steam{0%{transform:translate3d(0,18%,0) scale(.75);opacity:.08}45%{opacity:.28}100%{transform:translate3d(5%,-38%,0) scale(1.22);opacity:0}}
 
 .manifesto{padding:130px 0 120px;border-bottom:1px solid var(--line)}
 .kicker{font-size:9px;font-weight:900;letter-spacing:.26em;color:var(--gold)}
@@ -106,8 +108,22 @@ repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 3px)
 .foot{padding:60px 6vw;display:flex;justify-content:space-between;align-items:flex-end}.foot p{font-size:9px;color:#79736b;line-height:1.8}
 
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s ease}.reveal.on{opacity:1;transform:none}
+
+.footerLogo{display:block;width:116px;text-decoration:none}
+.footerLogo img{width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 2px 10px rgba(0,0,0,.2))}
 @media(max-width:760px){
-  .nav nav{display:none}.mobileMark{display:block}.heroPhoto{background-position:66% center}.heroShade{background:linear-gradient(0deg,rgba(5,5,4,.96) 0,rgba(5,5,4,.52) 62%,rgba(5,5,4,.20))}
+  .logoImage{width:158px}
+  .menuBtn{display:block;position:relative;z-index:102}
+  .nav nav{display:flex;position:fixed;inset:0 0 auto 0;top:0;min-height:100svh;background:rgba(9,8,7,.98);padding:120px 7vw 40px;flex-direction:column;gap:0;transform:translateY(-105%);transition:transform .28s ease;z-index:101}
+  .nav nav.open{transform:translateY(0)}
+  .nav nav a{font-size:24px;font-weight:900;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .menuBtn.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .menuBtn.open span:nth-child(2){opacity:0}
+  .menuBtn.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+
+@media(max-width:760px){
+  .nav nav{display:flex}.heroPhoto{background-position:66% center}.heroShade{background:linear-gradient(0deg,rgba(5,5,4,.96) 0,rgba(5,5,4,.52) 62%,rgba(5,5,4,.20))}
   .heroInner{padding-bottom:8vh}.hero h1{font-size:15vw}.badge{font-size:12px}.actions{display:block}.btn{width:100%;margin-top:8px}
   .manifesto{padding:100px 0}.big{font-size:13.6vw}
   .fullBleed{min-height:78svh}.fullBleed h2{font-size:13vw}
@@ -121,9 +137,11 @@ repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 3px)
 </head>
 <body>
 <header class="nav">
-  <a class="logo" href="#top"><small>福味楽園</small>ふくらく</a>
-  <nav><a href="#story">ふくらくについて</a><a href="#menu">お品書き</a><a href="#where">今日どこにおる？</a><a href="#request">出店依頼</a></nav>
-  <div class="mobileMark">FUKUI / TEPPAN</div>
+  <a class="logoImage" href="#top" aria-label="ふくらく〜福味楽園〜">
+    <img src="assets/logo-horizontal.png" alt="ふくらく〜福味楽園〜">
+  </a>
+  <nav id="mainNav"><a href="#story">ふくらくについて</a><a href="#menu">お品書き</a><a href="#where">今日どこにおる？</a><a href="#request">出店依頼</a></nav>
+  <button class="menuBtn" id="menuBtn" type="button" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button>
 </header>
 
 <main id="top">
@@ -191,11 +209,27 @@ repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 3px)
 </section>
 </main>
 
-<footer class="foot"><a class="logo" href="#top"><small>福味楽園</small>ふくらく</a><p>自称・日本一映えないキッチンカー<br>小さな福、大きな福が訪れますように。<br>© FUKURAKU. ALL RIGHTS RESERVED.</p></footer>
+<footer class="foot"><a class="footerLogo" href="#top" aria-label="ふくらく〜福味楽園〜"><img src="assets/logo-round.png" alt="ふくらく〜福味楽園〜"></a><p>自称・日本一映えないキッチンカー<br>小さな福、大きな福が訪れますように。<br>© FUKURAKU. ALL RIGHTS RESERVED.</p></footer>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+const menuBtn=document.getElementById('menuBtn');
+const mainNav=document.getElementById('mainNav');
+if(menuBtn&&mainNav){
+  menuBtn.addEventListener('click',()=>{
+    const open=mainNav.classList.toggle('open');
+    menuBtn.classList.toggle('open',open);
+    menuBtn.setAttribute('aria-expanded',String(open));
+    menuBtn.setAttribute('aria-label',open?'メニューを閉じる':'メニューを開く');
+    document.body.style.overflow=open?'hidden':'';
+  });
+  mainNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    mainNav.classList.remove('open');menuBtn.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded','false');document.body.style.overflow='';
+  }));
+}
 </script>
 </body>
 </html>
